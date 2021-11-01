@@ -1,3 +1,12 @@
+#include <Windows.h>
+#include <iostream>
+#include <string>
+#include <unordered_map>
+#include <vector>
+
+#include <DbgHelp.h>
+#pragma comment(lib, "Dbghelp.lib")
+
 std::unordered_map<std::string, std::vector<int>> resolve_encrypted_strings(uintptr_t idabase) {
     std::unordered_map<std::string, std::vector<int>> enc_strings;
 
